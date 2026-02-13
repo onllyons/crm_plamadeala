@@ -21,14 +21,22 @@ function renderProjects(projects) {
         // 🔹 HTML pentru fiecare lucrător individual
         const employeeCards = employeesList.length
             ? employeesList
-                  .map(
-                      (name) => `
+                  .map((entry) => {
+                      const employee = parseEmployeeEntry(entry);
+                      const safeName = escapeHtml(employee.name);
+                      const hasLink = Boolean(employee.id && employee.name);
+                      const slug = hasLink ? `${slugify(employee.name)}-${employee.id}` : "";
+                      const employeeNameHtml = hasLink
+                          ? `<a href="/crm/pages/angajati-page.php?slug=${encodeURIComponent(slug)}" class="fw-medium employee-chip-link">${safeName}</a>`
+                          : `<span class="fw-medium">${safeName}</span>`;
+
+                      return `
           <div class="employee-chip me-2 mb-2 d-inline-flex align-items-center px-3 py-1 rounded-pill bg-light border">
             <i class="fas fa-user-circle me-2 text-secondary" style="font-size:1.4rem;"></i>
-            <span class="fw-medium">${name}</span>
+            ${employeeNameHtml}
           </div>
         `
-                  )
+                  })
                   .join("")
             : `<p class="text-muted mb-0 text-center">Nu există lucrători asociați momentan.</p>`;
 
@@ -74,7 +82,7 @@ function renderProjects(projects) {
       `;
 
         const card = `
-      <div class="project-card card border-0 shadow-sm mb-4 p-4 rounded-4" data-id="${p.id}" style="background:#fff; transition:0.25s ease;">
+      <div class="project-card card border-0 shadow-sm mb-4 p-4 rounded-4" data-id="${p.id}" style="background:var(--falcon-card-bg); transition:0.25s ease;">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <div>
             <h5 class="mb-1 text-capitalize fw-bold">${p.title}</h5>
@@ -127,12 +135,12 @@ function renderProjects(projects) {
 
 
               <input type="file" id="files-${htmlId}" multiple class="d-none">
-              <button type="button" class="btn btn-light me-2 btn-upload" data-target="#files-${htmlId}" title="Atașează fișiere">
+              <button type="button" class="btn me-2 btn-upload" data-target="#files-${htmlId}" title="Atașează fișiere">
                 <i class="fa-solid fa-paperclip"></i>
               </button>
 
 
-              <div class='bg-chat-textarea btn-light'>
+              <div class='bg-chat-textarea'>
                 <textarea class="form-control me-2 inp-text-chat" rows="1" placeholder="Scrie o notă..." id="note-input-${projectId}"></textarea>
 
                 <button class="btn btn-primary btn-save-note" data-html-id="${htmlId}" data-db-id="${dbId}">
@@ -149,7 +157,7 @@ function renderProjects(projects) {
           <div class="tab-pane fade" id="note-${projectId}">
             <div class="p-3">
 
-              <div class='bg-chat-textarea btn-light'>
+              <div class='bg-chat-textarea'>
                 <textarea class="form-control me-2 inp-text-chat" rows="1" placeholder="Scrie o notă..." id="note-text-project-${dbId}"></textarea>
 
                 <button class="btn btn-primary btn-save-simple-note" data-id="${dbId}">
@@ -171,7 +179,7 @@ function renderProjects(projects) {
              <div id="saved-contracts-project-${dbId}"></div>
              <br>
              <div id="contract-project-${dbId}" class="mb-4">
-  <form class="contract-form p-3 rounded-4 shadow-sm bg-white ios-form">
+  <form class="contract-form p-3 rounded-4 shadow-sm ios-form" style="background:var(--falcon-card-bg);">
     <div class="form-section">
 
     <div class="row g-2">
@@ -318,6 +326,44 @@ function shortFileName(name, maxLen = 8) {
     return name;
 }
 
+function parseEmployeeEntry(value) {
+    const raw = String(value || "").trim();
+    const withId = raw.match(/^\[(\d+)\]\s*-\s*(.+)$/);
+    if (withId) {
+        return {
+            id: Number(withId[1]),
+            name: withId[2].trim(),
+        };
+    }
+    return { id: null, name: raw };
+}
+
+function slugify(value) {
+    return String(value || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+}
+
+function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (char) => {
+        const map = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            "\"": "&quot;",
+            "'": "&#39;",
+        };
+        return map[char] || char;
+    });
+}
+
+function formatMultilineText(value) {
+    return escapeHtml(value).replace(/\r\n|\r|\n/g, "<br>");
+}
+
 function renderFileLinks(files) {
   if (!files || !files.length) return "";
 
@@ -380,6 +426,8 @@ function loadProjectNotes(dbId, htmlId) {
             notes.forEach((note) => {
                 const files = note.files ? JSON.parse(note.files) : [];
                 const fileLinks = renderFileLinks(files);
+                const safeUsername = escapeHtml(note.username || "");
+                const safeNoteText = formatMultilineText(note.note_text || "");
 
                 notesContainer.append(`
           <div class="chat-card">
@@ -388,9 +436,9 @@ function loadProjectNotes(dbId, htmlId) {
             </div>
 
             <div class='main-chat-info'>
-              <div class="user-chat">${note.username || ""}</div>
+              <div class="user-chat">${safeUsername}</div>
               <div class='bg-chat-info'>
-                <div class="fw-medium">${note.note_text}</div>
+                <div class="fw-medium">${safeNoteText}</div>
               </div>
               <div class="file-chat">
                 ${fileLinks}
@@ -463,6 +511,7 @@ $(document).on("click", ".btn-save-note", function () {
             if (resp.success) {
                 const now = new Date().toLocaleString("ro-RO");
                 const fileLinks = renderFileLinks(resp.files || []);
+                const safeNoteText = formatMultilineText(noteText);
 
                 $(`#notes-container-${htmlId}`).prepend(`
           <div class="chat-card">
@@ -472,7 +521,7 @@ $(document).on("click", ".btn-save-note", function () {
             <div class='main-chat-info'>
               <div class="user-chat">Tu</div>
               <div class='bg-chat-info'>
-                <div class="fw-medium">${noteText}</div>
+                <div class="fw-medium">${safeNoteText}</div>
               </div>
               <div class="file-chat">${fileLinks}</div>
               <div class="date-chat">${now}</div>
@@ -584,7 +633,7 @@ $(document).on("click", ".btn-save-simple-note", function () {
 });
 
 // 🔹 Încărcare note simple
-function loadSimpleNotes(dbId) {
+function loadSimpleNotes(dbId, retryCount = 0) {
     $.ajax({
         url: "/crm/pages/packs/client/client-page/projects/load-simple-notes.php",
         type: "GET",
@@ -593,7 +642,10 @@ function loadSimpleNotes(dbId) {
         success: function (notes) {
             const list = $(`#simple-notes-list-project-${dbId}`);
             if (!list.length) {
-                console.error("⚠️ Containerul nu există pentru project_id:", dbId);
+                // Pot apărea răspunsuri AJAX întârziate după rerender; încercăm de câteva ori.
+                if (retryCount < 3) {
+                    setTimeout(() => loadSimpleNotes(dbId, retryCount + 1), 120);
+                }
                 return;
             }
 
@@ -611,19 +663,23 @@ function loadSimpleNotes(dbId) {
             }
 
             notes.forEach((note) => {
+                const safeNoteText = formatMultilineText(note.note_text || "");
+                const safeUsername = escapeHtml(note.username || "");
                 list.append(`
           <div class="border rounded p-2 mb-2 bg-light">
-            <div>${note.note_text}</div>
+            <div>${safeNoteText}</div>
             <small class="text-success d-block mt-1">
-              ${(note.username ? note.username + " · " : "") + new Date(note.created_at).toLocaleString("ro-RO")}
+              ${(safeUsername ? safeUsername + " · " : "") + new Date(note.created_at).toLocaleString("ro-RO")}
             </small>
           </div>
         `);
             });
         },
         error: function (xhr, status, error) {
-            console.error("❌ Eroare AJAX:", status, error, xhr.responseText);
             const list = $(`#simple-notes-list-project-${dbId}`);
+            if (!list.length || status === "abort") return;
+
+            console.error("❌ Eroare AJAX:", status, error, xhr.responseText);
             list.html('<p class="text-danger small text-center mb-0">Eroare la conexiune cu serverul.</p>');
         },
     });

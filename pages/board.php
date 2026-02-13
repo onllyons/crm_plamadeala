@@ -167,18 +167,18 @@ function extractEmployeesMap($conMain) {
       </style>
       <style>
          .btn-employee {
-         border: 1px solid #ddd;
+         border: 1px solid var(--falcon-border-color);
          border-radius: 20px;
          padding: 6px 14px;
-         background: #f8f9fa;
-         color: #333;
+         background: var(--falcon-card-bg);
+         color: var(--falcon-heading-color);
          font-weight: 500;
          transition: all 0.2s ease;
-         box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+         box-shadow: var(--falcon-box-shadow);
          }
          .btn-employee:hover {
-         background: #e9ecef;
-         color: #000;
+         background: var(--falcon-gray-200);
+         color: var(--falcon-heading-color);
          }
          .btn-check:checked + .btn-employee {
          background: linear-gradient(135deg, #007bff, #0056d2);

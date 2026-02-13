@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/crm/backend/db.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/crm/backend/payment_logic.php";
 header('Content-Type: application/json');
 
 function removeDiacritics($s){$m=['ă'=>'a','â'=>'a','î'=>'i','ș'=>'s','ş'=>'s','ț'=>'t','ţ'=>'t','Ă'=>'A','Â'=>'A','Î'=>'I','Ș'=>'S','Ş'=>'S','Ț'=>'T','Ţ'=>'T'];return strtr($s,$m);}
@@ -24,6 +25,7 @@ if ($er = $empStmt->get_result()->fetch_assoc()) {
   ];
 }
 $empStmt->close();
+$employeeRate = $employee ? (float)$employee['pret_m2'] : 0.0;
 
 /* 2) Proiectele */
 $sql = "
@@ -50,11 +52,8 @@ while ($row = $result->fetch_assoc()) {
 
   // 1️⃣ păstrezi textul original pentru calcule
   $employees_text = $row['employees'] ?? '';
-  $sum_for_emp = 0.0;
-
-  if (preg_match('/\[' . $id . '\][^\(]*\(([^×]+)×\s*([^)]+)\)/u', $employees_text, $m)) {
-    $sum_for_emp = (float) trim(str_replace(',', '.', $m[2]));
-  }
+  $surface = (float)($row['surface'] ?? 0);
+  $sum_for_emp = extractEmployeeDue($id, $employees_text, $employeeRate, $surface);
 
   $row['sum_employee'] = $sum_for_emp;
 

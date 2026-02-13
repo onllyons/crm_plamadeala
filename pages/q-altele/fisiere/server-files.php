@@ -60,22 +60,27 @@ while ($r = $res->fetch_assoc()) {
 
         if (in_array($ext, ['jpg','jpeg','png','gif','webp'])) {
             $thumb = "<img src='$fileUrl' alt='thumb' class='file-thumb'>";
+            $isImage = true;
         } elseif ($ext === 'pdf') {
             $thumb = "<div class='d-flex align-items-center justify-content-center file-thumb'>
                         <i class='fas fa-file-pdf file-icon text-danger'></i>
                       </div>";
+            $isImage = false;
         } elseif (in_array($ext, ['zip','rar','7z'])) {
             $thumb = "<div class='d-flex align-items-center justify-content-center file-thumb'>
                         <i class='fas fa-file-archive file-icon text-warning'></i>
                       </div>";
+            $isImage = false;
         } elseif (in_array($ext, ['doc','docx','odt','txt','xlsx','xls'])) {
             $thumb = "<div class='d-flex align-items-center justify-content-center file-thumb'>
                         <i class='fas fa-file-word file-icon text-primary'></i>
                       </div>";
+            $isImage = false;
         } else {
             $thumb = "<div class='d-flex align-items-center justify-content-center file-thumb'>
                         <i class='fas fa-file file-icon text-secondary'></i>
                       </div>";
+            $isImage = false;
         }
 
         $files[] = [
@@ -85,6 +90,7 @@ while ($r = $res->fetch_assoc()) {
             'username' => $r['username'] ?: '-',
             'created_at' => date('Y-m-d', strtotime($r['created_at'])),
             'thumb' => $thumb,
+            'is_image' => $isImage,
         ];
     }
 

@@ -41,7 +41,7 @@
     font-weight: 300;
     font-size: 23px;
     letter-spacing: -.3px;
-    color: #282828;
+    color: var(--falcon-heading-color);
 }
 .modal-footer-pacient{
     display: flex;
@@ -103,7 +103,6 @@
 .ios-form input::placeholder {
   color: #aaa;
 }
-
 
 
 

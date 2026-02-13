@@ -40,12 +40,16 @@ services:
       - db_data:/var/lib/mysql
       - ./db/studiosp_design.sql:/docker-entrypoint-initdb.d/init.sql
 
-  adminer:
-    image: adminer
-    container_name: db_adminer
+  phpmyadmin:
+    image: phpmyadmin:5-apache
+    container_name: db_phpmyadmin
     restart: always
     ports:
-      - "8082:8080"
+      - "8082:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 0
     depends_on:
       - db
 

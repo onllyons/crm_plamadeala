@@ -11,18 +11,28 @@
       <div class="modal-body">
         <input type="hidden" name="employee_id" id="pm_employee_id">
         <div class="mb-3">
+          <label class="form-label">Tip plată</label>
+          <select class="form-select" name="payment_type" id="pm_payment_type">
+            <option value="project">Plată pe proiect</option>
+            <option value="extra">Muncă extra (fără proiect)</option>
+            <option value="advance">Avans</option>
+            <option value="bonus">Bonus / Premium</option>
+          </select>
+        </div>
+        <div class="mb-3" id="pm_project_wrap">
           <label class="form-label">Proiect</label>
-          <select class="form-select" name="project_id" id="pm_project_id" required>
+          <select class="form-select" name="project_id" id="pm_project_id">
             <option value="">Alege proiect</option>
           </select>
+          <div id="pm_limit_hint" class="form-text"></div>
         </div>
         <div class="mb-3">
           <label class="form-label">Sumă</label>
-          <input type="number" step="0.01" min="0.01" class="form-control" name="amount" id="pm_amount" required>
+          <input type="number" step="0.01" min="0.01" class="form-control" name="amount" id="pm_amount">
         </div>
         <div class="mb-3">
           <label class="form-label">Monedă</label>
-          <select required class="form-select" name="currency" id="pm_currency">
+          <select class="form-select" name="currency" id="pm_currency">
             <option value="">Alege moneda</option>
             <option value="EUR">EUR</option>
             <option value="MDL">MDL</option>
@@ -40,4 +50,3 @@
     </form>
   </div>
 </div>
-

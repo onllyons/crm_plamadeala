@@ -1,3 +1,8 @@
+<?php
+$top_user_level = isset($_SESSION["crm_user"]["level"]) ? (int)$_SESSION["crm_user"]["level"] : 0;
+$showAccountingMenu = ($top_user_level === 0);
+?>
+
 <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand-lg">
    <button
       class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3"
@@ -76,6 +81,9 @@
             <div class="dropdown-menu dropdown-caret dropdown-menu-card border-0 mt-0" aria-labelledby="dashboards">
                 <div class="bg-white dark__bg-1000 rounded-3 py-2">
                     <a class="dropdown-item link-600 fw-medium" href="/crm/pages/q-altele/fisiere-proiect.php">Fisiere proiect</a>
+                    <?php if ($showAccountingMenu): ?>
+                    <a class="dropdown-item link-600 fw-medium" href="/crm/pages/q-altele/cheltuieli-contabilitate.php">Cheltuieli contabilitate</a>
+                    <?php endif; ?>
                 </div>
             </div>
             </li>

@@ -202,18 +202,12 @@ thead tr {
   background: #cdc8ff80;
   border-radius: 10px;
   padding: 6px;
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .summary-card::before {
-  content: "";
-  position: absolute;
-  top: -30%;
-  left: -30%;
-  width: 160%;
-  height: 160%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.5), transparent 70%);
-  z-index: 0;
+  content: none;
 }
 
 .summary-card .label {
@@ -239,4 +233,95 @@ font-weight: 600;
   color: #27ae60 !important;
 }
 
+/* Dark/light theme support for payments accordion */
+#employee-payments .accordion-item {
+  background-color: var(--falcon-card-bg);
+  border: 1px solid var(--falcon-border-color);
+  box-shadow: var(--falcon-box-shadow);
+}
 
+#employee-payments .accordion-button {
+  background-color: var(--falcon-card-bg);
+  color: var(--falcon-heading-color);
+}
+
+#employee-payments .accordion-button:not(.collapsed) {
+  background-color: var(--falcon-gray-200);
+  color: var(--falcon-primary);
+}
+
+#employee-payments .accordion-body {
+  background-color: var(--falcon-card-bg);
+}
+
+#employee-payments .table-responsive {
+  background-color: var(--falcon-card-bg);
+}
+
+#employee-payments .table-elegant {
+  color: var(--falcon-body-color);
+  background-color: var(--falcon-card-bg);
+}
+
+#employee-payments .table-elegant thead {
+  background-color: var(--falcon-gray-200);
+  border-bottom: 2px solid var(--falcon-border-color);
+}
+
+#employee-payments .table-elegant th {
+  color: var(--falcon-heading-color);
+}
+
+#employee-payments .table-elegant th,
+#employee-payments .table-elegant td {
+  border-bottom: 1px solid var(--falcon-border-color);
+}
+
+#employee-payments .table-elegant tr:hover td {
+  background-color: var(--falcon-gray-200);
+}
+
+/* Dark/light theme support for associated projects area */
+#projects_container .project-card {
+  background: var(--falcon-card-bg);
+  border: 1px solid var(--falcon-border-color);
+  box-shadow: var(--falcon-box-shadow);
+}
+
+#projects_container .project-card:hover {
+  box-shadow: var(--falcon-btn-falcon-hover-box-shadow);
+}
+
+#projects_container .project-info li {
+  border-bottom: 1px solid var(--falcon-border-color);
+}
+
+#projects_container .project-info strong,
+#projects_container .kv {
+  color: var(--falcon-heading-color);
+}
+
+#projects_container .section-title {
+  border-bottom: 1px dashed var(--falcon-border-color);
+}
+
+#projects_container .badge-soft {
+  background: var(--falcon-gray-200);
+  color: var(--falcon-body-color);
+  border: 1px solid var(--falcon-border-color);
+}
+
+#projects_container .btn-acordion {
+  background: var(--falcon-gray-200) !important;
+  color: var(--falcon-heading-color);
+  border: 1px solid var(--falcon-border-color) !important;
+}
+
+#projects_container .accordion-item {
+  background-color: var(--falcon-card-bg);
+  border: 1px solid var(--falcon-border-color);
+}
+
+#projects_container .accordion-body {
+  background-color: var(--falcon-card-bg);
+}

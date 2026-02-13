@@ -29,6 +29,16 @@ function createSlug($name, $id) {
 <head>
     <?php include '../assets/components/links.php' ?>
     <?php include '../assets/components/style-datatables.php' ?>
+    <style>
+      .month-table tfoot tr.month-total-row {
+        background: var(--falcon-gray-200) !important;
+        color: var(--falcon-heading-color);
+        font-weight: 600;
+      }
+      .month-table tfoot td {
+        border-top: 1px solid var(--falcon-border-color);
+      }
+    </style>
 </head>
 <body>
 <main class="main" id="top">
@@ -144,7 +154,7 @@ function createSlug($name, $id) {
                 <?php endforeach; ?>
                 </tbody>
                 <tfoot>
-                    <tr style="background:#f8f9fa; font-weight:600;">
+                    <tr class="month-total-row">
                         <td colspan="4" class="text-end">Total lună:</td>
                         <td><?= number_format($totalSuprafata, 2) ?></td>
                         <td></td>

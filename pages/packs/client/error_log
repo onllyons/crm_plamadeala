@@ -1,0 +1,6 @@
+[20-Oct-2025 13:33:32 UTC] PHP Warning:  Undefined array key 6 in /home/studiosp/public_html/crm/pages/packs/client/fetch_data.php on line 59
+[20-Oct-2025 13:33:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'asc LIMIT  0, 50' at line 1 in /home/studiosp/public_html/crm/pages/packs/client/fetch_data.php:69
+Stack trace:
+#0 /home/studiosp/public_html/crm/pages/packs/client/fetch_data.php(69): mysqli_query()
+#1 {main}
+  thrown in /home/studiosp/public_html/crm/pages/packs/client/fetch_data.php on line 69

@@ -1,0 +1,242 @@
+.project-card {
+    background: #fff;
+    border-radius: 1.2rem;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h6 {
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.project-card h6 i {
+    color: #0d6efd;
+    font-size: 1rem;
+}
+
+.project-info li {
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.project-info li:last-child {
+    border-bottom: none;
+}
+
+.project-info strong {
+    width: 120px;
+    display: inline-block;
+    color: #555;
+}
+
+.project-info a {
+    color: #0d6efd;
+}
+
+.project-info a:hover {
+    text-decoration: underline;
+}
+
+.btn-acordion {
+  box-shadow: none !important;
+  border: none !important;
+  background: #da00ff40 !important;
+  border-radius: 20px;
+  width: 100%;
+  color: #4917a1cf;
+  font-size: 14px;
+  letter-spacing: -.5px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-card.card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.project-card.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+.project-meta li {
+    margin-bottom: 0.25rem;
+}
+.project-header a {
+    color: inherit;
+}
+.project-header a:hover {
+    text-decoration: underline;
+}
+.kv {
+    font-weight: 600;
+}
+.badge-soft {
+    background: rgba(108, 117, 125, 0.12);
+    color: #6c757d;
+    border: 1px solid rgba(108, 117, 125, 0.2);
+}
+.section-title {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+.payments li {
+    margin-bottom: 0.2rem;
+}
+.p-0 {
+    padding: 0 !important;
+}
+
+.table-responsive {
+    padding: 1.5rem;
+}
+
+/* rotunjire completă a containerului accordion */
+.accordion-item {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+}
+
+/* margini delicate la header */
+.accordion-button {
+    font-weight: 600;
+    background-color: #fff;
+    border: none;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+/* interiorul accordionului */
+.accordion-body {
+    padding: 0;
+    border-radius: 0 0 1rem 1rem;
+    overflow: hidden;
+}
+
+/* tabel cu colțuri rotunjite */
+.table-container {
+    border-radius: 0 0 1rem 1rem;
+    overflow: hidden;
+}
+
+/* tabel frumos */
+.table-elegant {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    color: #212529;
+    background-color: #fff;
+}
+
+.table-elegant thead {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table-elegant th,
+.table-elegant td {
+    padding: 0.75rem 0.9rem;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.table-elegant th {
+    font-weight: 600;
+    color: #495057;
+}
+
+.table-elegant tr:hover td {
+    background-color: #f6f8fa;
+}
+
+table.table-elegant.align-middle.mb-0 {
+    text-align: center;
+}
+
+tbody tr,
+tbody tr td,
+tbody {
+    text-align: center !important;
+}
+
+thead tr {
+    border-right: 1px solid #dee2e6 !important;
+}
+
+.accordion-item{
+  box-shadow: none;
+}
+
+
+.payment-summary {
+    display: flex;
+}
+
+.summary-card {
+  flex: 1;
+  margin-right: 3px;
+  display: block;
+  background: #cdc8ff80;
+  border-radius: 10px;
+  padding: 6px;
+  backdrop-filter: blur(8px);
+}
+
+.summary-card::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.5), transparent 70%);
+  z-index: 0;
+}
+
+.summary-card .label {
+font-weight: 600;
+    color: #272727;
+    position: relative;
+    font-size: 11px;
+    letter-spacing: -.3px;
+}
+
+.summary-card .value {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 0rem;
+    text-align: left;
+}
+
+.text-danger {
+  color: #ff1800 !important;
+}
+
+.text-success {
+  color: #27ae60 !important;
+}
+
+

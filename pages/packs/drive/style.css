@@ -1,0 +1,22 @@
+.h5-title{
+	font-size: 32px;
+    text-align: center;
+    margin-top: .5rem;
+}
+.deleteBtn{
+	background: #fff0f0;
+    color: red;
+    font-size: 13px;
+    font-weight: 400;
+}
+.addBtn{
+    background: #dbefff;
+    color: #007cdf;
+}
+.btn-aufrage {
+    width: 15rem; 
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}

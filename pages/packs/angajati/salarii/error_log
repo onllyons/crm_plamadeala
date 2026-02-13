@@ -1,0 +1,40 @@
+[16-Oct-2025 18:35:02 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php:28
+Stack trace:
+#0 /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php(28): mysqli_stmt->bind_param()
+#1 {main}
+  thrown in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php on line 28
+[16-Oct-2025 18:35:03 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php:28
+Stack trace:
+#0 /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php(28): mysqli_stmt->bind_param()
+#1 {main}
+  thrown in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php on line 28
+[16-Oct-2025 18:35:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php:28
+Stack trace:
+#0 /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php(28): mysqli_stmt->bind_param()
+#1 {main}
+  thrown in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php on line 28
+[16-Oct-2025 18:35:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php:28
+Stack trace:
+#0 /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php(28): mysqli_stmt->bind_param()
+#1 {main}
+  thrown in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php on line 28
+[16-Oct-2025 18:35:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php:28
+Stack trace:
+#0 /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php(28): mysqli_stmt->bind_param()
+#1 {main}
+  thrown in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php on line 28
+[16-Oct-2025 18:35:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php:28
+Stack trace:
+#0 /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php(28): mysqli_stmt->bind_param()
+#1 {main}
+  thrown in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php on line 28
+[16-Oct-2025 18:35:04 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php:28
+Stack trace:
+#0 /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php(28): mysqli_stmt->bind_param()
+#1 {main}
+  thrown in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php on line 28
+[16-Oct-2025 18:35:05 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php:28
+Stack trace:
+#0 /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php(28): mysqli_stmt->bind_param()
+#1 {main}
+  thrown in /home/studiosp/public_html/crm/pages/packs/angajati/salarii/add-payment.php on line 28

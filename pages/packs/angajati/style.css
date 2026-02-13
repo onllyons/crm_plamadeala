@@ -1,0 +1,299 @@
+.flex-fustify-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.li-sorting-table-a{
+    padding-right: 0.8rem;
+    flex: 1 1 25%;
+}
+.btn-sort{
+    min-width: 3rem;
+}
+#table-upload_file_wrapper{
+    width: 100%;
+}
+.text-muted-info{
+    line-height: 1.3;
+    display: block;
+    color: #006cc2;
+}
+
+.modal-dialog-pacient{
+    min-width: 50% !important;
+}
+.custom-file-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  padding: 0;
+  margin: 0 auto;
+  border: 3px dashed #ccc;
+  border-radius: 1rem;
+  width: 76%;
+}
+
+.modal-body-pacient h5 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 23px;
+    letter-spacing: -.3px;
+    color: #282828;
+}
+.modal-footer-pacient{
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: 5rem;
+    gap: 13px;
+    padding-top: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

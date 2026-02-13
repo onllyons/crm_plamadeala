@@ -1,0 +1,2 @@
+[08-Oct-2025 11:02:50 UTC] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/studiosp/public_html/crm/pages/q-altele/fisiere/server-files.php on line 43
+[08-Oct-2025 11:05:00 UTC] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/studiosp/public_html/crm/pages/q-altele/fisiere/server-files.php on line 48

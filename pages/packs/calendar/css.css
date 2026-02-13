@@ -1,0 +1,15 @@
+.fc-header-toolbar.fc-toolbar.fc-toolbar-ltr {
+    padding-top: 17px;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+#appCalendar {
+    height: calc(100vh - 8.4rem) !important;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary{
+    background: #2196f3!important;
+    border: 1px solid #0071cb!important;
+}

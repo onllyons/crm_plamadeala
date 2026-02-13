@@ -1,0 +1,208 @@
+* {
+  font-family: 'DejaVu Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+body {
+    background: white!important;
+    font-size: 16px;
+    color: black;
+    font-family: 'DejaVu Sans', sans-serif !important;
+}
+.img-logo{
+    width: 200px;
+}
+.view-mode{
+    width: 60%;
+    margin: 0 auto;
+}
+.h2{
+    font-size: 19px;
+    color: black;
+    font-weight: bold;
+    width: auto!important;
+    margin: 0;
+    padding: 0!important;
+    background: red;
+    width: inherit!important;
+    font-size: 2rem; /* ~32px */
+    font-weight: 500;
+    line-height: 1.2;
+}
+p{
+    margin-bottom: 0;
+}
+img{
+    display: block;
+}
+.w-full{
+}
+.contract-box {
+    max-width: 800px;
+    margin: auto;
+}
+.contract-box li {
+    margin-bottom: 6px;
+}
+.img{
+    width: 100%;
+}
+.text-b{
+    font-weight: bold;
+}
+.text-y{
+    color: #f7bc2a;
+}
+.d-flex{
+    display: flex;
+    margin: 0!important;
+    padding: 0!important;
+}
+.caseta{
+    padding: 0px 9px;
+    display: flex;
+    align-items: center;
+}
+.b-black {
+    border: 1px solid black;
+}
+.text-right{
+    text-align: right;
+}
+
+.contract-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 15px;
+}
+.contract-table td {
+  vertical-align: top;
+  padding: 4px 8px;
+}
+.contract-table td.label {
+  width: 45%;
+  font-weight: normal !important;
+}
+.contract-table td.value {
+  width: 45%;
+  font-weight: 500!important;
+}
+.contract-table td,
+.contract-table .contract-boxed,
+.contract-boxed div,
+.contract-boxed span {
+  font-family: 'DejaVu Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+.contract-boxed {
+  border: 1px solid #333;
+  border-radius: 1px;
+  padding: 6px 4px;
+  font-size: 14px;
+  line-height: 1;
+  font-family: 'DejaVu Sans', sans-serif !important;
+  text-align: center;
+  font-weight: 700!important;
+}
+.contract-section-title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700!important;
+
+}
+.h2-start{
+  font-family: sans-serif;
+  font-size:48px;
+  font-weight: 700!important;
+  margin:0;
+  padding:0;
+  text-align:right;
+  color: #000; 
+  padding-top: 6rem
+}
+
+.client-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-family: 'DejaVu Sans', sans-serif !important;
+  font-size: 14px;
+  color: #000;
+}
+
+.client-table td {
+  padding: 6px 8px;
+  vertical-align: top;
+  font-weight: 400 !important;
+}
+
+.client-table .label {
+  width: 40%;
+}
+
+.client-box {
+  border: 1px solid #f7bc2b;
+  border-radius: 2px;
+  padding: 5px 8px;
+  font-family: 'DejaVu Sans', sans-serif !important;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #000;
+}
+
+.client-title {
+  font-weight: 600;
+  color: #000;
+  margin: 1rem 0 0.5rem;
+}
+
+.client-title span {
+  color: #f7bc2b;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

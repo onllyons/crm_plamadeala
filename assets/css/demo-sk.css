@@ -1,0 +1,262 @@
+.logo-name{
+  font-size: 18px;
+    font-weight: 600;
+} 
+.avatar-set-name{
+  
+}
+.badge-subtle-success {
+    color: #00894f;
+    background-color: #d9f8eb;
+}
+.SESSION_NamePrename{
+  margin: 6px 0 0 8px!important;
+  font-size: 14px;
+}
+.button-22 {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #3a86ff;
+  box-shadow: 0 5px #4433ff;
+}
+.dataTables_length label {
+  font-size: 0;
+}
+
+.dataTables_length label select {
+  font-size: 14px; /* sau cât vrei */
+}
+.button-22:hover {
+  box-shadow: 0 3px #4433ff;
+  top: 1px;
+}
+.button-22:active {
+  box-shadow: 0 0 #4433ff;
+  top: 5px;
+}
+.btn-default {
+  display: inline-block;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-default:hover {
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-cancel {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #343a40;
+  box-shadow: 0 5px #212529;
+}
+.btn-cancel:hover {
+  box-shadow: 0 3px #212529;
+  top: 1px;
+}
+.btn-cancel:active {
+  box-shadow: 0 0 #212529;
+  top: 5px;
+}
+
+.h1-title{ 
+    font-size: 26px;
+    font-weight: 700; 
+}
+
+
+
+
+
+
+.form-cancel {
+  font-family: inherit;
+  display: inline-block;
+  width: fit-content;
+  height: 2.6em;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  transition: color .5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.form-cancel:before {
+ content: "";
+ position: absolute;
+ z-index: -1;
+ background: var(--color);
+ height: 150px;
+ width: 200px;
+ border-radius: 50%;
+}
+.form-cancel:before {
+ top: 100%;
+ left: 100%;
+ transition: all .7s;
+}
+
+.form-cancel:hover:before {
+ top: -30px;
+ left: -30px;
+}
+
+.form-cancel:active:before {
+ transition: background 0s;
+}
+/*culorile doar aici*/
+.bg-0{
+  color: #2e2e2ee0;
+  background: #e2e2e2;
+}
+.bg-0:before {
+ background: #5d5d5de0;
+}
+.bg-0:hover {
+ color: #fff;
+}
+.bg-0:active:before {
+ background: #ff6363;
+}
+/*11111*/
+.bg-1{
+  color: #555555;
+  background: #cdd6e2;
+}
+.bg-1:before {
+ background: #8e939b;
+}
+.bg-1:hover {
+ color: white;
+}
+.bg-1:active:before {
+ background: #5c89c5
+}
+/* ..//end culorile doar aici*/
+
+
+.form-accept {
+  width: inherit;
+  font-family: inherit;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  background: #698170;
+  overflow: hidden;
+  border: 0px;
+  margin: 0;
+  padding: 0.57rem 0.5rem;
+}
+
+.form-accept:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #9fdfa1;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+  top: 0;
+  border: 0;
+}
+
+.form-accept:hover::after {
+ right: auto;
+ left: 0;
+ width: 100%;
+}
+#users-table_wrapper{
+    width: 100%!important;
+}
+.name-sp{
+  font-size: 15.77px;
+  line-height: 1;
+  display: block;
+  letter-spacing: 0.5px;
+}
+.form-accept span {
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+  margin: 0px auto 0 auto;
+  color: #fff;
+  font-size: 17px;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  -webkit-box-align: center !important;
+  align-items: center !important;
+  justify-content: center;
+
+}
+
+.form-accept:hover span {
+ color: #183153;
+ animation: scaleUp 0.3s ease-in-out;
+}
+.footer-padding{
+  padding: 0% 4% 3% 0px!important;
+}
+@keyframes scaleUp {
+ 0% {
+  transform: scale(1);
+ }
+
+ 50% {
+  transform: scale(0.95);
+ }
+
+ 100% {
+  transform: scale(1);
+ }
+}
+
+
+/* spam  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
